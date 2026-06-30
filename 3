@@ -1,0 +1,14 @@
+#Questão 3:  Crie um programa que: Leia 8 números inteiros e os armazene em uma lista. Mostre: O maior valor O menor valor A quantidade de números pares
+lista = []
+for i in range(8):
+    numero = int(input("Digite numeros inteiros:"))
+    lista.append(numero)
+maior = max(lista)
+menor = min(lista)
+pares = 0
+for numero in lista:
+    if numero % 2 == 0:
+        pares += 1
+print("O maior numero da lista é:",maior)
+print("O menor numero da lista é:",menor)
+print("A quantidade de numeros pares na lista são:",pares)
