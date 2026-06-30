@@ -1,0 +1,18 @@
+#6. Considere um arquivo chamado notas.txt contendo uma nota por linha. Faça um programa que: • Leia todas as notas. • Armazene-as em uma lista. • Exiba: • Quantidade de notas • Maior nota • Menor nota • Média das notas
+notas = []
+
+with open("notas.txt", "r") as arquivo:
+    for linha in arquivo:
+        nota = float(linha.strip())
+        notas.append(nota)
+
+quantidade = len(notas)
+maior = max(notas)
+menor = min(notas)
+soma = sum(notas)
+media = soma / quantidade
+
+print(quantidade)
+print(maior)
+print(menor)
+print(media)
