@@ -1,0 +1,27 @@
+#4. Crie uma matriz 3x3 preenchida pelo usuário. • Ao final, exiba: • A soma de todos os elementos da matriz. • A soma dos elementos da diagonal principal.
+matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+for l in range(0, 3):
+    for c in range(0, 3):
+        matriz[l][c] = int(input("Digite um valor para [" + str(l) + ", " + str(c) + "]: "))
+
+print("-=" * 30)
+
+for l in range(0, 3):
+    for c in range(0, 3):
+        elemento_str = "[" + str(matriz[l][c]) + "]"
+        print(elemento_str, end="")
+    print()
+
+soma_total = 0
+soma_diagonal = 0
+
+for l in range(0, 3):
+    for c in range(0, 3):
+        soma_total = soma_total + matriz[l][c]
+        if l == c:
+            soma_diagonal = soma_diagonal + matriz[l][c]
+
+print("-=" * 30)
+print(soma_total)
+print(soma_diagonal)
